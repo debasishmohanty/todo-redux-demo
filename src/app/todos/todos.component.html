@@ -1,0 +1,10 @@
+<p>todos works!</p>
+<form>
+  <input type="text" name="todo-title" class="td-form-field">
+  <select id="status"
+    name="selectedStatus"
+    [(ngModel)]="selectedStatus" class="td-form-field">
+      <option *ngFor="let status of statusArr" [value]="status.id">{{ status.title }}</option>
+  </select>
+  <button type="button" (click)="createTodo()">Add</button>
+</form>
